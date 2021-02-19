@@ -1,0 +1,241 @@
+body {
+min-width: 1210px;
+margin: 0;
+padding: 0;
+font-size: 13px;
+line-height: 22px;
+font-family:'Open Sans' ;
+color: #394b50;
+}
+.container {
+    width: 1170px;
+    margin:0 auto;
+}
+h2 {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 31px;
+    text-align: center;
+    margin-bottom: 0;
+}
+.sub-h2{
+    font-size: 17px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+/*PAGE HEADER*/
+.page-header{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+.header-nav {
+    list-style: none;
+    margin: 0;
+    
+}
+.header-nav li {
+    display: inline-block;
+    text-transform: uppercase;
+    font-family: 'Lato' serif;
+  font-size: 14px;
+    padding: 10px 20px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+.header-nav li:hover{
+    background-color: #ffbb42;
+    color: white;
+}
+/*GREETING FORM*/
+.greeting-form {
+background-color: #709dca;
+min-height: 590px;
+}
+.slogan{
+  text-align: center;
+  padding-top: 100px; 
+  color: white;
+}
+.slogan h2{    
+    margin-bottom: 10px;    
+}
+
+.greeting-form form {
+    width: 1080px;
+    display: flex;
+    justify-content: space-between;
+}
+.greeting-form input  {
+height: 35px;
+width: 270px;
+border-radius: 2px;
+border: none;
+}
+.greeting-form input::placeholder{
+color: #a9a9a9;
+padding-left: 50px;
+position: relative;
+background: url(img/pers.png) 5px 0px no-repeat;
+}
+.greeting-form .phone input::placeholder{
+    background: url(img/phone.png) 5px 0px no-repeat;
+}
+.greeting-form .e-mail input::placeholder{
+    background: url(img/mail.png) 5px 0px no-repeat;
+}
+.greeting-form button {
+    height: 38px;
+    width: 200px;
+    border: none;
+    background-color: #ffbb42;
+    border-radius: 2px;
+    color: white;
+    text-transform: uppercase;
+}
+/*SLIDER*/
+.viewport{
+    display: block;
+    width: 640px;
+    height: 340px;    
+    margin: 0 auto;
+    background: url(img/laptop.png) no-repeat;
+    margin: -250px auto;
+    position: relative;
+   }
+ .slider-box{
+     position: absolute;
+     width: 445px;
+     height: 265px;
+     left: 100px;
+     top: 15px;
+    }  
+    .slider {
+        width: inherit;
+        height: inherit;
+        position: relative;
+        overflow: hidden;
+    }
+    .slider-box>input{
+        display: none;
+    }
+      .slides {
+        width: inherit;
+        height: inherit;
+        position: absolute;
+        opacity: 0;
+        z-index: 0;
+        transform: scale(1.5);
+        transition: transform ease-in-out .5s, opacity ease-in-out .5s ;
+       }
+         .slide1{
+             background-image: url(img/high-view-of-cup-of-tea-and-herbs_23-2148317001.jpg);
+             background-size: 445px 270px;
+         }
+         .slide2 {
+             background-image: url(img/side-view-of-circle-chocolate-candies-on-a-black-table-jpg_140725-12879.jpg);
+             background-size: 445px 270px;
+         }
+         .slide3 {
+             background-image: url(img/side-view-sandwich-white-bread-with-grilled-meat-cutlet-cheese-lettuce-french-fries-mayo-and-ketchup-on-a-boardjpg_141793-5081.jpg);
+             background-size: 445px 270px;
+         }
+      .slider-box .controls {
+          position: absolute;
+          left: 50%;
+          margin-left: -60px;
+      }   
+      .slider-box label{
+          cursor: pointer;
+          display: inline-block;
+          height: 8px;
+          width: 8px;
+          margin: 70px 12px 0 16px;
+          position: relative;
+          border-radius: 50%;
+          transition: background  ease-in-out .5s;
+      }
+      .slider-box label::after{
+          border: 2px solid gray;
+          content:"";
+          display: block;
+          height: 12px;
+          width: 12px;
+          position: absolute;
+          left: -4px;
+          top: -4px;
+          border-radius: 50%;
+      }
+      .slider-box label:hover, 
+#slide1:checked ~ .controls label:nth-of-type(1),
+#slide2:checked ~ .controls label:nth-of-type(2),
+#slide3:checked ~ .controls label:nth-of-type(3){
+	background-color: gray;
+}
+
+#slide1:checked ~ .slider > .slide1,
+#slide2:checked ~ .slider > .slide2,
+#slide3:checked ~ .slider > .slide3
+ {
+	opacity: 1;
+	z-index: 1;
+	transform: scale(1);
+}
+/*OUR SERVICES*/
+.services {
+    margin-top: 400px;
+}
+.services-head {
+    margin-bottom: 80px;
+}
+.services-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.services-list a {
+    text-transform: uppercase;
+    font-size: 17px;
+    text-decoration: none;
+    color:#394b50 ;
+    font-weight: bold;
+}
+.services-list a:hover{    
+    opacity: 0.5;
+}
+
+.services-list li {
+    max-width: 420px;
+    padding-left: 80px;
+    padding-bottom: 55px;
+    position: relative;
+    margin-right: 20px;
+}
+.services-list li::before{
+    content: "";
+    display: block;
+    width: 62px;
+    height: 55px;
+    position: absolute;
+   left:-10px;
+    top: 15px;
+}
+.services-list li:first-child::before{
+    background: url(img/clock.png) no-repeat;
+}
+.services-list li:nth-child(2)::before{
+    background: url(img/wheel.png) no-repeat;
+}
+.services-list li:nth-child(3)::before{
+    background: url(img/hat.png) no-repeat;
+}
+.services-list li:nth-child(4)::before{
+    background: url(img/roket.png) no-repeat;
+}
+.services-list li:nth-child(5)::before{
+    background: url(img/frindly.png) no-repeat;
+}
+.services-list li:nth-child(6)::before{
+    background: url(img/dollar.png) no-repeat;
+}
